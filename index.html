@@ -121,7 +121,7 @@
     <h1>Phương Thảo nè 🫶🏻</h1>
     <p>👉 Bấm vào đây là mình xuất hiện liền nè 👋</p>
 
-    <button class="btn team" onclick="openLink('team')">
+    <button class="btn mail" onclick="openLink('mail')">
       <i class="fa fa-envelope-o"></i> Mail
     </button>
 
@@ -139,15 +139,21 @@
   </div>
 
   <script>
-    function openLink(platform) {
-      const links = {
-        tiktok: "phamnuphuongthao@vus-etsc.edu.vn",
-        facebook: "https://www.facebook.com/na.ty.258509",
-        zalo: "https://zalo.me/054776675"
-      };
+  function openLink(platform) {
+    const links = {
+      mail: "mailto:phamnuphuongthao@vus-etsc.edu.vn",
+      facebook: "https://www.facebook.com/na.ty.258509",
+      instagram: "https://www.instagram.com/your_instagram_username",
+      zalo: "https://zalo.me/054776675"
+    };
+
+    if (links[platform]) {
       window.open(links[platform], "_blank");
+    } else {
+      alert("Link chưa được cấu hình nha 🥹");
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
